@@ -12,6 +12,10 @@
 📌 Construção do crud!!!<br>
 📌 Criação do sistema de rotas.<br>
 
+==============> CRIANDO AGORA <==============<br>
+
+📍 Criando o algoritmo do login / cadastro e o PURL.
+
 ==============> À fazer <==============<br>
 📍 Sistema de apresentação de views e dados.<br>
 📍 Layout do cadastro e rotas para novos clientes se cadastrar.<br>
@@ -24,4 +28,4 @@
 📍 Criar mecânisco de segurança para o carrinho.<br>
 📍 Criar à busca de informações na Base de Dados à partir do carrinho.<br>
 📍 Preparar os cálculos para à apresentação do carrinho.<br>
-📍TT8EUGIFEU
+📍 ....
