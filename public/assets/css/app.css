@@ -1,0 +1,15 @@
+.navegacao{
+    background-color: rgb(66, 88, 119);
+    color: white;
+}
+
+.rodape{
+    background-color: rgb(66, 88, 119);
+    color: black;
+}
+
+.menu > a{
+    color: white;
+    text-decoration: none;
+    padding: 0px 15px;
+}

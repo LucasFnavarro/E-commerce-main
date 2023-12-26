@@ -1,0 +1,22 @@
+{
+    "name": "desktop/cadastro-elogin",
+    "description": "LOJA ONLINE PHP",
+    "type": "project",
+    "authors": [
+        {
+            "name": "Lucas Navarro",
+            "email": "forsytem@gmail.com"
+        }
+    ],
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "core\\": "core/"
+        },
+        "files": [
+            "config.php"
+        ]
+
+    }
+
+}

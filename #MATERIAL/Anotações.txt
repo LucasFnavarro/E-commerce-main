@@ -1,0 +1,10 @@
+Padrão VC
+
+
+Model 
+View
+Controller
+
+Model - dados/bases de dados
+View - layout + html + css ....
+Controller - regras de  negócios
