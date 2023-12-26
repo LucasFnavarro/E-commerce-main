@@ -33,6 +33,7 @@ class Store
         # Check if there is a client with a session = logged in client
         return isset($_SESSION['cliente']);   
     }
+    
 }
 
 

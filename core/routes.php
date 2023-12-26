@@ -1,6 +1,4 @@
 <?php
-
-
 # ============================================================== #
 
 # Significa que quando encontrar inicio na query string(URL)
@@ -13,8 +11,10 @@
 $routes = [
     'inicio' => 'main@index',
     'loja' => 'main@loja',
-    'clientes' => 'main@clientes',
-    'carrinho' => 'main@carrinho'
+    'carrinho' => 'main@carrinho',
+    'login' => 'main@login',
+    'criar_cliente' => 'main@novo_cliente',
+    'criar_client_submit' => 'main@criar_client_submit'
 ];
 
 # Defines an action if a defect occurs  

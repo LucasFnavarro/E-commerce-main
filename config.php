@@ -12,12 +12,7 @@ define("MYSQL_PASS",        "");
 define("MYSQL_CHARSET",     "utf8");
 
 
-
-
-
-
-
-# Config MySQL maiu
+# Config MySQL main
 /*
 define("MYSQL_SERVER",      "149.102.146.39");
 define("MYSQL_DATABASE",    "store");

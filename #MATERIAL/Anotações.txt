@@ -8,3 +8,19 @@ Controller
 Model - dados/bases de dados
 View - layout + html + css ....
 Controller - regras de  negócios
+
+CLIENTES:
+
+	id
+	email
+	senha
+	nome_completo
+	endereco
+	cidade
+	contato
+	purl
+	ativo
+	create_at
+	update_at
+	delete_at
+	PRIMARY KEY (`id`) USING BTREE

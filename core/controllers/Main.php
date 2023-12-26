@@ -16,7 +16,7 @@ class Main
       'inicio',
       'layout/footer',
       'layout/html_footer',
-    ]); 
+    ]);
   }
 
   // ========================================================================== 
@@ -42,4 +42,25 @@ class Main
       'layout/html_footer',
     ]);
   }
+
+  public function novo_cliente()
+  {
+    if(Store::clienteLogado()){
+      $this->index();
+      return;
+    }
+    Store::Layout([
+      'layout/html_header',
+      'layout/header',
+      'criar_cliente',
+      'layout/footer',
+      'layout/html_footer',
+    ]);
+  }
+
+  public function criar_client_submit() {
+    echo '<pre>';
+    print_r($_POST);
+  }
+
 }
