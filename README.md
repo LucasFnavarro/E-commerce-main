@@ -24,4 +24,4 @@
 📍 Criar mecânisco de segurança para o carrinho.<br>
 📍 Criar à busca de informações na Base de Dados à partir do carrinho.<br>
 📍 Preparar os cálculos para à apresentação do carrinho.<br>
-📍 ...
+📍TT8EUGIFEU
