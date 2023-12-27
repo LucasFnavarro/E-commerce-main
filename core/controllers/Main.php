@@ -74,7 +74,7 @@ class Main
       return;
     }
 
-    # Verifica se a senha1 é igual senha2
+    # Verifica se a senha 1 é igual senha 2 
     if ($_POST['text_senha_1'] != $_POST['text_senha_2']) {
 
       # as passwords são diferentes e não podemos avançae
@@ -98,6 +98,7 @@ class Main
     }
 
     # Parte do registro dos clientes no Banco de Dados
+      
 
 
     
