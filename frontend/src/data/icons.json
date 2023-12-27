@@ -1,0 +1,17 @@
+[
+    {
+        "id": 1,
+        "url": "../assets/icons/user.png",
+        "name": "user"
+    },
+    {
+        "id": 2,
+        "url": "../assets/icons/fav.png",
+        "name": "fav"
+    },
+    {
+        "id": 3,
+        "url": "../assets/icons/bolsa.png",
+        "name": "bag"
+    }
+]
