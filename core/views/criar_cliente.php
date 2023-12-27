@@ -45,6 +45,15 @@
                         <input type="submit" value="Criar conta" class="btn btn-primary">
                     </div>
 
+                    <?php if(isset($_SESSION['erro'])) : ?>
+                        <div class="alert alert-danger text-center p-2">
+                            <?= $_SESSION['erro']; ?>
+                            <?php  unset($_SESSION['erro']); ?>
+                        </div>
+                        <?php endif;?>
+
+                        <?php ?>
+
                 </form>
 
 

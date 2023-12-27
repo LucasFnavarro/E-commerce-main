@@ -2,6 +2,7 @@
 
 namespace core\controllers;
 
+use core\classes\Database;
 use core\classes\Store;
 
 class Main
@@ -45,7 +46,7 @@ class Main
 
   public function novo_cliente()
   {
-    if(Store::clienteLogado()){
+    if (Store::clienteLogado()) {
       $this->index();
       return;
     }
@@ -58,9 +59,47 @@ class Main
     ]);
   }
 
-  public function criar_client_submit() {
-    echo '<pre>';
-    print_r($_POST);
-  }
+  public function criar_client_submit()
+  {
 
+    # Verifica se já existe uma sessão
+    if (Store::clienteLogado()) {
+      $this->index();
+      return;
+    }
+
+    # Verifica se ouve submit de um formulario
+    if ($_SERVER['REQUEST_METHOD'] != 'POST') {
+      $this->index();
+      return;
+    }
+
+    # Verifica se a senha1 é igual senha2
+    if ($_POST['text_senha_1'] != $_POST['text_senha_2']) {
+
+      # as passwords são diferentes e não podemos avançae
+      $_SESSION['erro'] = "As senhas não correspondem";
+      $this->novo_cliente();
+      return;
+    }
+
+    # Verifica se já existe um e-mail igual na hora do cadastro
+    $bd = new Database();
+    $parametros = [
+      ':email' => strtolower(trim($_POST['text_email'])),
+    ];
+    $resultados = $bd->select("SELECT email FROM clientes WHERE email = :email", $parametros);
+
+    # Verifica se o cliente já existe!
+    if (count($resultados) != 0) {
+      $_SESSION['erro'] = "Já existe um mesmo e-mail cadastrado";
+      $this->novo_cliente();
+      return;
+    }
+
+    # Parte do registro dos clientes no Banco de Dados
+
+
+    
+  }
 }

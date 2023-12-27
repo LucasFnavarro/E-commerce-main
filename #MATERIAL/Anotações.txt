@@ -23,4 +23,13 @@ CLIENTES:
 	create_at
 	update_at
 	delete_at
-	PRIMARY KEY (`id`) USING BTREE
+	PRIMARY KEY (`id`) USING BTREE	
+
+
+	[text_email] => teste@hotmail.com
+    [text_senha_1] => 123131313
+    [text_senha_2] => 131313131
+    [text_nome_completo] => lucas felipe
+    [text_endereco] => tumucumac
+    [text_cidade] => londrina
+    [text_contato] => 54545454

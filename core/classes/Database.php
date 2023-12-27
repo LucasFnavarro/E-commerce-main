@@ -44,6 +44,7 @@ class Database
     public function select($sql, $parametros = null)
     {
 
+        $sql = trim($sql);
         # Checks whether it is a "SELECT" statement using Regular Expressions
         if (!preg_match("/^SELECT/i", $sql)) {
             throw new Exception('Base de dados - não é uma instrução SELECT.');
@@ -84,6 +85,8 @@ class Database
     public function insert($sql, $parametros = null)
     {
 
+        $sql = trim($sql);
+
         # Check if it is an "INSERT" statement using Regular Expressions
         if (!preg_match("/^INSERT/i", $sql)) {
             throw new Exception('Base de dados - não é uma instrução INSERT.');
@@ -117,6 +120,7 @@ class Database
 
     public function update($sql, $parametros = null)
     {
+        $sql = trim($sql);
 
         # Check if it is an "UPDATE" statement using Regular Expressions
         if (!preg_match("/^UPDATE/i", $sql)) {
@@ -153,6 +157,7 @@ class Database
 
     public function delete($sql, $parametros = null)
     {
+        $sql = trim($sql);
 
         # Check if it is an "DELETE" statement using Regular Expressions
         if (!preg_match("/^DELETE/i", $sql)) {
@@ -188,6 +193,8 @@ class Database
 
     public function statement($sql, $parametros = null)
     {
+        $sql = trim($sql);
+
         # It will check if it is a different instruction than the previous ones
         if (preg_match("/SELECT|INSERT|UPDATE|DELETE/i", $sql)) {
             throw new Exception('Instrução inválida');
