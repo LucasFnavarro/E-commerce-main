@@ -23,7 +23,9 @@ class Database
                 'charset=' . MYSQL_CHARSET,
             MYSQL_USER,
             MYSQL_PASS,
-            array(PDO::ATTR_PERSISTENT => TRUE)
+
+            # Mantém uma ligação na BD - estabelece a conexão de forma mais rápida
+            array(PDO::ATTR_PERSISTENT => true)
         );
 
         # Debug

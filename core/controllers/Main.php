@@ -83,11 +83,12 @@ class Main
       return;
     }
 
-    # Verifica se já existe um e-mail igual na hora do cadastro
+    # Verifica se já existe um e-mail igual no BD na hora do cadastro
     $bd = new Database();
     $parametros = [
       ':email' => strtolower(trim($_POST['text_email'])),
     ];
+    
     $resultados = $bd->select("SELECT email FROM clientes WHERE email = :email", $parametros);
 
     # Verifica se o cliente já existe!

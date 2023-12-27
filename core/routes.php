@@ -22,7 +22,6 @@ $actions = 'inicio';
 
 # Checks the query string if the action exists
 if (isset($_GET['a'])) {
-
     # Checks if the action exists in the routes
     if (!key_exists($_GET['a'], $routes)) {
         $actions = 'inicio';
@@ -38,3 +37,6 @@ $method = $parts[1];
 
 $ctr = new $controller();
 $ctr->$method();
+
+
+?>
