@@ -11,7 +11,6 @@ Controller - regras de  negócios
 
 CLIENTES:
 
-	id
 	email
 	senha
 	nome_completo
@@ -23,8 +22,6 @@ CLIENTES:
 	create_at
 	update_at
 	delete_at
-	PRIMARY KEY (`id`) USING BTREE	
-
 
 	[text_email] => teste@hotmail.com
     [text_senha_1] => 123131313

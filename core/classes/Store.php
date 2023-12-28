@@ -34,11 +34,12 @@ class Store
         return isset($_SESSION['cliente']);   
     }
 
-    public static function gerarHash()
-    {
-        
+    public static function gerarHash($num_caracteres = 12)
+    {   
+        // criar hashes para senhas.
+        $chars = "0123456789abcdefghijklmnopqrstuwxyzabcdefghijklmnopqrstuwxyzABCDEFGHIJKLMNOPQRSTUWXYZABCDEFGHIJKLMNOPQRSTUWXYZ";
+        return substr(str_shuffle($chars),  0, $num_caracteres);
     }
-
 
     
 }

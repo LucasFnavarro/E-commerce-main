@@ -2,8 +2,9 @@
 
 namespace core\controllers;
 
-use core\classes\Database;
+use core\classes\EnviarEmail;
 use core\classes\Store;
+use core\models\Clientes;
 
 class Main
 {
@@ -77,31 +78,24 @@ class Main
     # Verifica se a senha 1 é igual senha 2 
     if ($_POST['text_senha_1'] != $_POST['text_senha_2']) {
 
-      # as passwords são diferentes e não podemos avançae
+      # as passwords são diferentes e não podemos avançar
       $_SESSION['erro'] = "As senhas não correspondem";
       $this->novo_cliente();
       return;
     }
 
     # Verifica se já existe um e-mail igual no BD na hora do cadastro
-    $bd = new Database();
-    $parametros = [
-      ':email' => strtolower(trim($_POST['text_email'])),
-    ];
-    
-    $resultados = $bd->select("SELECT email FROM clientes WHERE email = :email", $parametros);
+    $cliente = new Clientes();
+    if ($cliente->verificar_email_existe($_POST['text_email'])) {
 
-    # Verifica se o cliente já existe!
-    if (count($resultados) != 0) {
       $_SESSION['erro'] = "Já existe um mesmo e-mail cadastrado";
       $this->novo_cliente();
       return;
     }
 
-    # Parte do registro dos clientes no Banco de Dados
-      
+    $purl = $cliente->registrar_cliente();
 
-
-    
+    // criar link PURL para envio de emails
+    $link_purl = "http://localhost/E-commerce-main/public/?a=confirmar_email&purl=$purl";
   }
 }
