@@ -30,12 +30,12 @@ class EnviarEmail
 
             //Recipients
             $mail->setFrom('codegeius@gmail.com', 'CodeGenius');
-            $mail->addAddress('navarrolucas0009@gmail.com');     //Add a recipient
+            $mail->addAddress('loserss@outlook.pt');     //Add a recipient
 
             //Content
             $mail->isHTML(true);                                  //Set email format to HTML
             $mail->Subject = 'Seja bem vindo a CodeGenius';
-            $mail->Body    = 'Boas vindas caro cliente <strong>Gênius</strong>';
+            $mail->Body    = 'Boas vindas caro cliente <strong>Genius</strong>';
            
 
             $mail->send();

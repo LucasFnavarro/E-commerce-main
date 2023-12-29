@@ -27,6 +27,7 @@ class Clientes
         }
     }
 
+    
     public function registrar_cliente()
     {
         # Parte do registro dos novos clientes no Banco de Dados

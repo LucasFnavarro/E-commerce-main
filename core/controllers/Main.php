@@ -11,6 +11,12 @@ class Main
   // ========================================================================== 
   public function index()
   {
+
+    # teste de envios de email
+    //$email = new EnviarEmail();
+    //$email->enviar_email_confirmacao_novo_cliente();
+    //die();
+
     # Displays the store page
     Store::Layout([
       'layout/html_header',

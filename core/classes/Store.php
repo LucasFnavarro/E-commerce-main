@@ -37,7 +37,7 @@ class Store
     public static function gerarHash($num_caracteres = 12)
     {   
         // criar hashes para senhas.
-        $chars = "0123456789abcdefghijklmnopqrstuwxyzabcdefghijklmnopqrstuwxyzABCDEFGHIJKLMNOPQRSTUWXYZABCDEFGHIJKLMNOPQRSTUWXYZ";
+        $chars = "0123456789abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUWXYZABCDEFGHIJKLMNOPQRSTUWXYZ";
         return substr(str_shuffle($chars),  0, $num_caracteres);
     }
 
