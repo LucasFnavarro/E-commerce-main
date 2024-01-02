@@ -15,7 +15,7 @@ class Main
     # teste de envios de email
     //$email = new EnviarEmail();
     //$email->enviar_email_confirmacao_novo_cliente();
-    //die();
+    //die('OK');
 
     # Displays the store page
     Store::Layout([
@@ -85,6 +85,7 @@ class Main
     if ($_POST['text_senha_1'] != $_POST['text_senha_2']) {
 
       # as passwords são diferentes e não podemos avançar
+      
       $_SESSION['erro'] = "As senhas não correspondem";
       $this->novo_cliente();
       return;

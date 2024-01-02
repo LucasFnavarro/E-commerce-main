@@ -8,34 +8,39 @@ use PHPMailer\PHPMailer\Exception;
 
 class EnviarEmail
 {
-    public function enviar_email_confirmacao_novo_cliente()
+    public function enviar_email_confirmacao_novo_cliente($email_cliente)
     {
 
-        //Load Composer's autoloader
-        //require '../../vendor/autoload.php';
+
+        # envia um email para o cliente na intenção de confirmar o email
+
+
+
+        //$purl = '';
 
         //Create an instance; passing `true` enables exceptions
         $mail = new PHPMailer(true);
 
         try {
-            //Server settings
-            $mail->SMTPDebug = SMTP::DEBUG_SERVER;                      //Enable verbose debug output
-            $mail->isSMTP();                                            //Send using SMTP
-            $mail->Host       = 'smtp.gmail.com';                     //Set the SMTP server to send through
-            $mail->SMTPAuth   = true;                                   //Enable SMTP authentication
-            $mail->Username   = 'codegeius@gmail.com';                     //SMTP username
-            $mail->Password   = 'xdll vajg bqzl ztpr';                               //SMTP password
-            $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;            //Enable implicit TLS encryption
-            $mail->Port       = 465;                                    //TCP port to connect to; use 587 if you have set `SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS`
+            // opções do servidor
+            $mail->SMTPDebug = SMTP::DEBUG_OFF;                      
+            $mail->isSMTP();                                            
+            $mail->Host       = EMAIL_HOST;                   
+            $mail->SMTPAuth   = true;                                   
+            $mail->Username   = EMAIL_FROM;                    
+            $mail->Password   = EMAIL_PASS;                            
+            $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;            
+            $mail->Port       = EMAIL_PORT;                                    
 
-            //Recipients
-            $mail->setFrom('codegeius@gmail.com', 'CodeGenius');
-            $mail->addAddress('loserss@outlook.pt');     //Add a recipient
+            // emissor e recetor
+            $mail->setFrom(EMAIL_FROM, APP_NAME);
+            $mail->addAddress($email_cliente);     
 
-            //Content
-            $mail->isHTML(true);                                  //Set email format to HTML
-            $mail->Subject = 'Seja bem vindo a CodeGenius';
-            $mail->Body    = 'Boas vindas caro cliente <strong>Genius</strong>';
+            // assunto
+            $mail->isHTML(true);                                  
+            $mail->Subject = APP_NAME . 'Confirmação de email.';
+            $html = '<p>Seja bem-vindo à nossa loja ' . APP_NAME . '</p>';
+            $mail->Body    = $html;
            
 
             $mail->send();

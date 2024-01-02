@@ -2,9 +2,18 @@
     <div class="row my-5">
         <div class="col-sm-6 offset-sm-3">
             <div class="text-center">
-                <h3>Criar uma nova Conta</h3>
+                <h3>Criar uma nova Conta</h3><br>
 
                 <form action="?a=criar_client_submit" method="post">
+
+                <?php if(isset($_SESSION['erro'])) : ?>
+                        <div class="alert alert-danger text-center p-2">
+                            <?= $_SESSION['erro']; ?>
+                            <?php  unset($_SESSION['erro']); ?>
+                        </div>
+                        <?php endif;?>
+
+                        <?php ?><br>
 
                     <div class="mb-3">
                         <label>E-mail</label>
@@ -44,15 +53,6 @@
                     <div class="mb-3">
                         <input type="submit" value="Criar conta" class="btn btn-primary">
                     </div>
-
-                    <?php if(isset($_SESSION['erro'])) : ?>
-                        <div class="alert alert-danger text-center p-2">
-                            <?= $_SESSION['erro']; ?>
-                            <?php  unset($_SESSION['erro']); ?>
-                        </div>
-                        <?php endif;?>
-
-                        <?php ?>
 
                 </form>
 
