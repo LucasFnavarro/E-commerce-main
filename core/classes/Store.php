@@ -1,5 +1,4 @@
 <?php
-#pseudocódigo
 namespace core\classes;
 
 use Exception;
