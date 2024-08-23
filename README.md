@@ -8,7 +8,7 @@
 
 ==============> Concluído <==============<br>
 
-📌 Construção do sistema de gestão da base de dado!!!<br>
+📌 Construção do sistema de gestão da base de dados!!!<br>
 📌 Construção do crud!!!<br>
 📌 Criação do sistema de rotas.<br>
 
