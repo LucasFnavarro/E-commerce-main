@@ -43,13 +43,3 @@ class Store
 
     
 }
-
-
-
-/*
-$structures é esses ficheiros à baixo
-html_header.php 
-inicio.php
-html_footer.php
-
-*/
