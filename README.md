@@ -11,14 +11,14 @@
 📌 Construção do sistema de gestão da base de dados!!!<br>
 📌 Construção do crud!!!<br>
 📌 Criação do sistema de rotas.<br>
-
+📌Sistema de apresentação de views e dados.<br>
+📌 Layout do cadastro e rotas para novos clientes se cadastrar.<br>
 ==============> CRIANDO AGORA <==============<br>
 
 📍 Criando o algoritmo do login / cadastro e o PURL.
 
 ==============> À fazer <==============<br>
-📍 Sistema de apresentação de views e dados.<br>
-📍 Layout do cadastro e rotas para novos clientes se cadastrar.<br>
+
 📍 Validações dos formulários.<br>
 📍 Criação do PURL e Criação da gestão dos clientes na Base de Dados.<br>
 📍 Adicionar o PHPMailer no projeto.<br>
